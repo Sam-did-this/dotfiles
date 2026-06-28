@@ -1,0 +1,116 @@
+/* Oasis Lagoon Dark Theme */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "EnvyCodeR Nerd Font Mono";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #192330;
+    color: #cdd6f4;
+    border-bottom: 2px solid #89b4fa;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: transparent;
+    color: #6c7a8d;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    background: #2a3a4a;
+    border-bottom: 2px solid #89b4fa;
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    color: #cdd6f4;
+    background: #2a3a4a;
+    border-bottom: 2px solid #89b4fa;
+}
+
+#workspaces button.urgent {
+    color: #192330;
+    background: #f28b82;
+    border-bottom: 2px solid #f28b82;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-disk
+#custom-wather
+
+#tray {
+    padding: 0 10px;
+    color: #cdd6f4;
+    background: #2a3a4a;
+    margin: 4px 2px;
+}
+
+#clock {
+    color: #89b4fa;
+    font-weight: bold;
+}
+
+#network {
+    color: #94e2d5;
+}
+
+#pulseaudio {
+    color: #a6e3a1;
+}
+
+#cpu {
+    color: #89b4fa;
+    padding: 0 10px;
+    background: #2a3a4a;
+    margin: 4px 2px;
+}
+
+#memory {
+    color: #cba6f7;
+    padding: 0 10px;
+    background: #2a3a4a;
+    margin: 4px 2px;
+}
+
+#tray {
+    background: transparent;
+}
+
+tooltip {
+    background: #192330;
+    border: 1px solid #89b4fa;
+    color: #cdd6f4;
+}
+
+#custom-disk {
+    color: #f9e2af;
+    padding: 0 10px;
+    background: #2a3a4a;
+    margin: 4px 2px;
+}
+
+#disk.warning {
+    color: #192330;
+    background: #f9e2af;
+}
+
+#disk.critical {
+    color: #192330;
+    background: #f28b82;
+}
+
+#custom-weather {
+    color: #89b4fa;
+    padding: 0 10px;
+    background: #2a3a4a;
+    margin: 4px 2px;
+}

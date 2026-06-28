@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "custom/disk", "cpu", "memory", "pulseaudio", "custom/weather"],
+    
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0"
+        },
+        "on-click": "activate",
+        "on-scroll-up": "swaymsg workspace prev",
+        "on-scroll-down": "swaymsg workspace next"
+    },
+    
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{:%A, %B %d, %Y}"
+    },
+    
+    "network": {
+        "interface": "enp0s31f6",
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 Connected",
+        "format-disconnected": "󰈂 Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor",
+        "interval": 3
+    },
+    
+    "custom/disk": {
+        "format": "{}",
+        "interval": 30,
+        "exec": "/home/apollo/.config/waybar/scripts/disk.sh",
+        "return-type": "json"
+    },
+
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "tooltip-format": "{load}",
+        "interval": 5
+    },
+    
+    "memory": {
+        "format": "󰍛 {used:.1f}G",
+        "tooltip-format": "{used:.1f}G used / {total:.1f}G total\nSwap: {swapUsed:.1f}G / {swapTotal:.1f}G",
+        "interval": 5
+    },
+    
+    "custom/weather": {
+        "format": "{}",
+        "interval": 1800,
+        "exec": "/home/apollo/.config/waybar/scripts/weather.sh",
+        "return-type": "json",
+        "on-click": "xdg-open https://wttr.in"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5
+    },
+    
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    }
+}
